@@ -1,12 +1,13 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #1a1a1a; /* fallback shown until background.jpg is added */
+  background-color: rgba(51, 51, 51, 0.7);
   background-image: url("/assets/images/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-blend-mode: overlay;
   color: #fff;
   font-family: system-ui, sans-serif;
 }
@@ -14,5 +15,10 @@ body {
 main {
   max-width: 800px;
   margin: 0 auto;
+  text-shadow: #423f3f 3px 3px;
   padding: 2rem;
+}
+
+h1 {
+  text-shadow: #423f3f 3px 3px;
 }
