@@ -2,7 +2,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: #1a1a1a; /* fallback shown until background.jpg is added */
-  background-image: url("/assets/images/background.jpg");
+  background-image: url("/assets/images/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
