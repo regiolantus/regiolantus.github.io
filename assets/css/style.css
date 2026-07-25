@@ -1,3 +1,14 @@
+:root {
+    --sidebar-width: 150px;
+}
+
+.container {
+    width: 100%;
+    display:grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: var(--sidebar-width) auto;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,10 +26,10 @@ body {
 main {
   max-width: 800px;
   margin: 0 auto;
-  text-shadow: #423f3f 3px 3px;
   padding: 2rem;
 }
 
 h1 {
   text-shadow: #423f3f 3px 3px;
 }
+
