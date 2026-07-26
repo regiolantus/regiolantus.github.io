@@ -10,7 +10,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 50px;
   min-height: 100vh;
   background-color: rgba(51, 51, 51, 0.7);
   background-image: url("/assets/images/background.png");
@@ -27,6 +27,13 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+    background-position: 70% center;
+  }
 }
 
 h1 {

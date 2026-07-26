@@ -1,0 +1,7 @@
+<div class="sidebar">
+    {% for item in site.data.nav %}
+    <div class="panel">
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    </div>
+    {% endfor %}
+</div>
