@@ -4,10 +4,12 @@ body {
 }
 
 .gallery {
-    width: 600px;
+    width: 100%;
+    max-width: 900px;
     margin:auto;
     border-radius: 3px;
     overflow:hidden;
+    position: relative;
 }
 
 .trip-title {
@@ -16,8 +18,8 @@ body {
 }
 
 .img-container {
-    width: 200px;
-    height:200px;
+    width: 33.3333%;
+    aspect-ratio: 1 / 1;
     float:left;
     position: relative;
     overflow: hidden;
@@ -60,6 +62,13 @@ body {
     position: absolute;
     z-index: 2;
     pointer-events: none;
+}
+
+.img-container.active .img-wrapper,
+.img-container.postactive .img-wrapper {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #00000000;
 }
 
 .img-container.active.positioned {

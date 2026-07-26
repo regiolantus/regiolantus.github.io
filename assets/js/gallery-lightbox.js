@@ -9,8 +9,8 @@ $(
         $(".img-container").click(function() {
             let w = $(this).outerWidth()
             let h = $(this).outerHeight()
-            let x = $(this).offset().left
-            let y = $(this).offset().top
+            let x = $(this).position().left
+            let y = $(this).position().top
 
             $(".active").not($(this)).remove()
             let copy = $(this).clone();
