@@ -22,9 +22,9 @@ body {
 }
 
 .trip-title::after {
-    content: "\25BE";
-    font-size: 0.6em;
-    transition: transform 300ms ease;
+    content: "▼";
+    font-size: 1em;
+    transition: transform 500ms ease;
 }
 
 .trip-title.collapsed::after {
