@@ -1,0 +1,33 @@
+name: Update Last.fm chart
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch lfm chart image
+        run: |
+          curl -sSL --fail -o assets/images/lfm-chart.jpg \
+            "https://www.tapmusic.net/collage.php?user=regiolantus&type=7day&size=5x5&caption=true&playcount=true"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/lfm-chart.jpg
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update weekly Last.fm chart"
+            git push
+          fi
