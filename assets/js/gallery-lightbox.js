@@ -21,14 +21,15 @@ $(
 
             $(".active").not($(this)).remove()
             let copy = $(this).clone();
-            copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+            copy.insertAfter($(this)).height(h).width(w)
+                .css({ top: y - 8, left: x - 8 })
+                .addClass("active")
 
-            $(".active").css('top', y-8);
-            $(".active").css('left', x-8);
-
-            setTimeout(function() {
-                copy.addClass("positioned")
-            }, 0)
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    copy.addClass("positioned")
+                })
+            })
 
         })
     }

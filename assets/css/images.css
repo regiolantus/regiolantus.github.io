@@ -1,0 +1,23 @@
+div.lfm-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.lfm-chart img {
+  width: 900px;
+  height: auto;
+}
+
+div.gallery img {
+  width:300px;
+  height: auto;
+}
+
+div.gallery {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
