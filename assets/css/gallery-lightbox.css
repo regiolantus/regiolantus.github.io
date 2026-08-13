@@ -133,3 +133,18 @@ body {
     opacity: 1;
     transition-delay: 200ms;
 }
+
+@media (max-width: 700px) {
+    .gallery {
+        border-radius: 20px;
+    }
+
+    .img-container {
+        width: 50%;
+    }
+
+    .caption {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+}

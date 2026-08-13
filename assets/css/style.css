@@ -29,8 +29,9 @@ main {
   padding: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   body {
+    margin: 20px;
     background-attachment: scroll;
     background-position: 70% center;
   }
@@ -42,8 +43,10 @@ h1 {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
+  column-gap: 28px;
+  row-gap: 16px;
   margin-top: auto;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
