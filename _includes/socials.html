@@ -1,0 +1,11 @@
+<div class="socials">
+    {% for item in site.data.socials %}
+    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.title }}" title="{{ item.title }}">
+        {% if item.image %}
+        <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+        {% else %}
+        <i class="{{ item.icon }}"></i>
+        {% endif %}
+    </a>
+    {% endfor %}
+</div>

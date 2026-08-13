@@ -40,3 +40,32 @@ h1 {
   text-shadow: #423f3f 3px 3px;
 }
 
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: auto;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.socials a {
+  color: #fff;
+  font-size: 1.8rem;
+  opacity: 0.85;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.socials a:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.socials img {
+  height: 1em;
+  width: 1em;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: invert(1);
+}
+
