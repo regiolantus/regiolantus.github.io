@@ -6,6 +6,13 @@ $(
             $(this).css('background-image', 'url('+ imgSrc + ')');
         })
 
+        $(".trip-title.collapsed").next(".gallery").hide();
+
+        $(".trip-title").click(function() {
+            $(this).toggleClass("collapsed");
+            $(this).next(".gallery").slideToggle(300);
+        })
+
         $(".img-container").click(function() {
             let w = $(this).outerWidth()
             let h = $(this).outerHeight()
